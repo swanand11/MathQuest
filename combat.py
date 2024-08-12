@@ -58,9 +58,3 @@ class BossBattle:
                 print(f"You lost. The correct answer was: {correct_answer}. Try again!")
                 break
             print(problem)
-
-if __name__ == "__main__":
-    boss = Boss("Solving Linear Equations")
-    battle = BossBattle(boss)
-    battle.fight()
-

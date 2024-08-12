@@ -1,5 +1,6 @@
 import time
 import sys
+import combat
 ascii_art = """
 ░▒▓██████████████▓▒░ ░▒▓██████▓▒░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░░▒▓███████▓▒░▒▓████████▓▒░
 ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▒░   ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░         ░▒▓█▓▒░
@@ -12,7 +13,7 @@ ascii_art = """
                                                               ░▒▓██▓▒░
 """
 print(ascii_art)
-def typewriter_print(text, delay=0.05):
+def typewriter_print(text, delay=0.02):
     lines = text.split('\n')
     for line in lines:
         padded_line = f"{' ' * 5}{line}"
@@ -34,4 +35,7 @@ by age-old knowledge, and confront formidable guardians of wisdom.The fate of Nu
 Will you reclaim the Math Crystals and restore peace to this storied land? Your epic adventure begins now."""
 
 typewriter_print(text)
-
+if __name__ == "__main__":
+    boss =combat.Boss("Solving Linear Equations")
+    battle = combat.BossBattle(boss)
+    battle.fight()
